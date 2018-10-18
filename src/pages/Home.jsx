@@ -28,7 +28,7 @@ class Home extends Component{
                             </div>
                         </div>
                     </div>
-                    <Footer style={{marginTop:'5%'}} />
+                    <Footer  />
                 </Fragment>
             )
         }
