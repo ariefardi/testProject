@@ -8,6 +8,7 @@ class CardInfo extends Component {
                     <div className="card-body">
                         <h5 className="card-title"> Rachel</h5>
                         <table>
+                            <tbody>
                             <tr>
                                 <td>Developer</td>
                             </tr>
@@ -36,6 +37,7 @@ class CardInfo extends Component {
                                 <td>:</td>
                                 <td> Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran</td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

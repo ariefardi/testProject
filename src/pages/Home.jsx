@@ -2,11 +2,20 @@ import React, {Component, Fragment} from 'react'
 import Navbar from '../components/Navbar'
 import CardImage from '../components/Card/CardImage'
 import CardInfo from '../components/Card/CardInfo'
+import {connect} from 'react-redux'
+import {fetchDataHandler} from "../Action/pmActions";
+
+
 class Home extends Component{
+    componentDidMount () {
+        this.props.fetchDataHandler()
+    }
     render() {
-        return (
+        let user = this.props.data
+        if (user.length>0) {
+            return (
                 <Fragment>
-                    <Navbar/>
+                    <Navbar user={user} />
                     <div className="container">
                         <div className="row">
                             <div className="col-6" style={{marginTop:"10%",padding:0}}>
@@ -18,8 +27,27 @@ class Home extends Component{
                         </div>
                     </div>
                 </Fragment>
-        )
+            )
+        }
+        else {
+            return (
+                <div>
+                    <h5>Loading.....</h5>
+                </div>
+            )
+        }
+    }
+}
+const mapStateToProps = (state)=>{
+    return {
+        data: state.pmReducer.users
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchDataHandler: () => dispatch(fetchDataHandler())
     }
 }
 
-export default Home
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
+// export default Home

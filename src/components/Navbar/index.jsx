@@ -5,6 +5,8 @@ const backNav = {
 }
 class Navbar extends  Component {
     render () {
+        let user = this.props.user
+        console.log(user, ' ini user loh')
         return (
             <nav className="navbar navbar-expand-md navbar-dark" style={backNav} >
                 <a className="navbar-brand abs" href="#">Rachel Smith</a>
