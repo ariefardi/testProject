@@ -2,9 +2,12 @@ import React, {Component} from 'react'
 
 class CardImage extends Component {
     render() {
+        let user = this.props.user[0]
+        let picture = user.picture.medium
+        console.log('user dari card image', user)
         return (
             <div className="card" style={{width: '100%'}}>
-                <img src="https://ih1.redbubble.net/image.414755159.4345/flat,550x550,075,f.u2.jpg" alt=""/>
+                <img height="400" src={picture} alt=""/>
             </div>
         )
     }

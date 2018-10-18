@@ -19,10 +19,10 @@ class Home extends Component{
                     <div className="container">
                         <div className="row">
                             <div className="col-6" style={{marginTop:"10%",padding:0}}>
-                                <CardImage />
+                                <CardImage user={user} />
                             </div>
                             <div className="col-6" style={{marginTop:"15%",padding:0}}>
-                                <CardInfo />
+                                <CardInfo user={user} />
                             </div>
                         </div>
                     </div>

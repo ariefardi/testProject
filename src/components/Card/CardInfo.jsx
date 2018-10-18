@@ -1,7 +1,11 @@
 import React, {Component} from 'react'
 import './style.css'
+import moment from 'moment'
 class CardInfo extends Component {
     render() {
+        let user = this.props.user[0]
+        let dateBirth = moment(user.dob.date).format('MMMM Do YYYY')
+        console.log('this is date birth', dateBirth)
         return (
             <div>
                 <div className="card " style={{width: '30rem'}}>
@@ -15,27 +19,27 @@ class CardInfo extends Component {
                             <tr>
                                 <td>Date of Birth </td>
                                 <td>:</td>
-                                <td> March 14th, 1984</td>
+                                <td> {dateBirth}</td>
                             </tr>
                             <tr>
                                 <td>Gender </td>
                                 <td>:</td>
-                                <td> Female</td>
+                                <td> {user.gender} </td>
                             </tr>
                             <tr>
                                 <td>Phone </td>
                                 <td>:</td>
-                                <td> 1234567889</td>
+                                <td> {user.phone} </td>
                             </tr>
                             <tr>
                                 <td>Email </td>
                                 <td>:</td>
-                                <td> info@mysite.com</td>
+                                <td> {user.email} </td>
                             </tr>
                             <tr>
                                 <td>Address </td>
                                 <td>:</td>
-                                <td> Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran Jalan Pancoran</td>
+                                <td> {`${user.location.street}, ${user.location.city}, ${user.location.state}, ${user.location.postcode}`} </td>
                             </tr>
                             </tbody>
                         </table>

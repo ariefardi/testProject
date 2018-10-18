@@ -5,11 +5,11 @@ const backNav = {
 }
 class Navbar extends  Component {
     render () {
-        let user = this.props.user
+        let user = this.props.user[0]
         console.log(user, ' ini user loh')
         return (
             <nav className="navbar navbar-expand-md navbar-dark" style={backNav} >
-                <a className="navbar-brand abs" href="#">Rachel Smith</a>
+                <a className="navbar-brand abs" href="#"> {`${user.name.first} ${user.name.last}`} </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>
