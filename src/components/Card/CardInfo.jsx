@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './style.css'
 import moment from 'moment'
+import GoogleMap from '../GoogleMap'
 class CardInfo extends Component {
     render() {
         let user = this.props.user[0]
@@ -8,38 +9,45 @@ class CardInfo extends Component {
         console.log('this is date birth', dateBirth)
         return (
             <div>
-                <div className="card " style={{width: '30rem'}}>
+                <div className="card " style={{width: '570px'}}>
                     <div className="card-body">
-                        <h5 className="card-title"> Rachel</h5>
-                        <table>
+                        <h3 className="card-title" style={{paddingLeft:8, marginBottom: 0}} > {user.name.first} {user.name.last} </h3>
+                        <table style={{padding:0}} >
                             <tbody>
                             <tr>
                                 <td>Developer</td>
                             </tr>
                             <tr>
-                                <td>Date of Birth </td>
-                                <td>:</td>
-                                <td> {dateBirth}</td>
+                                <td style={{paddingTop:0}}>Date of Birth </td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}> {dateBirth}</td>
                             </tr>
                             <tr>
-                                <td>Gender </td>
-                                <td>:</td>
-                                <td> {user.gender} </td>
+                                <td style={{paddingTop:0}}>Gender </td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}> {user.gender} </td>
                             </tr>
                             <tr>
-                                <td>Phone </td>
-                                <td>:</td>
-                                <td> {user.phone} </td>
+                                <td style={{paddingTop:0}}>Phone </td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}> {user.phone} </td>
                             </tr>
                             <tr>
-                                <td>Email </td>
-                                <td>:</td>
-                                <td> {user.email} </td>
+                                <td style={{paddingTop:0}}>Email </td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}> {user.email} </td>
                             </tr>
                             <tr>
-                                <td>Address </td>
-                                <td>:</td>
-                                <td> {`${user.location.street}, ${user.location.city}, ${user.location.state}, ${user.location.postcode}`} </td>
+                                <td style={{paddingTop:0}}>Address </td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}> {`${user.location.street}, ${user.location.city}, ${user.location.state}, ${user.location.postcode}`} </td>
+                            </tr>
+                            <tr>
+                                <td style={{paddingTop:0}}>Location</td>
+                                <td style={{paddingTop:0}}>:</td>
+                                <td style={{paddingTop:0}}>
+                                    <GoogleMap user={user}/>
+                                </td>
                             </tr>
                             </tbody>
                         </table>

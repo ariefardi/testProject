@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react'
 import Navbar from '../components/Navbar'
 import CardImage from '../components/Card/CardImage'
 import CardInfo from '../components/Card/CardInfo'
+import Footer from '../components/Footer'
+
 import {connect} from 'react-redux'
 import {fetchDataHandler} from "../Action/pmActions";
 
@@ -21,11 +23,12 @@ class Home extends Component{
                             <div className="col-6" style={{marginTop:"10%",padding:0}}>
                                 <CardImage user={user} />
                             </div>
-                            <div className="col-6" style={{marginTop:"15%",padding:0}}>
+                            <div className="col-6" style={{marginTop:"13%",padding:0}}>
                                 <CardInfo user={user} />
                             </div>
                         </div>
                     </div>
+                    <Footer />
                 </Fragment>
             )
         }
