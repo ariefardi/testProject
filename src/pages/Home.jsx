@@ -20,15 +20,15 @@ class Home extends Component{
                     <Navbar user={user} />
                     <div className="container">
                         <div className="row">
-                            <div className="col-6" style={{marginTop:"10%",padding:0}}>
+                            <div className="col-6" style={{marginTop:"8%",padding:0}}>
                                 <CardImage user={user} />
                             </div>
-                            <div className="col-6" style={{marginTop:"13%",padding:0}}>
+                            <div className="col-6" style={{marginTop:"11%",padding:0}}>
                                 <CardInfo user={user} />
                             </div>
                         </div>
                     </div>
-                    <Footer />
+                    <Footer style={{marginTop:'5%'}} />
                 </Fragment>
             )
         }

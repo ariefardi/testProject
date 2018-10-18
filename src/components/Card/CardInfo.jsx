@@ -11,7 +11,8 @@ class CardInfo extends Component {
             <div>
                 <div className="card " style={{width: '570px'}}>
                     <div className="card-body">
-                        <h3 className="card-title" style={{paddingLeft:8, marginBottom: 0}} > {user.name.first} {user.name.last} </h3>
+                        <h3 className="card-title" style={{paddingLeft:8, marginBottom: 0}} >
+                            {user.name.first.charAt(0).toUpperCase() + user.name.first.slice(1)} {user.name.last.charAt(0).toUpperCase() + user.name.last.slice(1)} </h3>
                         <table style={{padding:0}} >
                             <tbody>
                             <tr>

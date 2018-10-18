@@ -6,7 +6,7 @@ class CardImage extends Component {
         let picture = user.picture.medium
         console.log('user dari card image', user)
         return (
-                <img height="460" width='570' src={picture} alt=""/>
+                <img className="img-fluid" height="460" width='570' src={picture} alt=""/>
         )
     }
 }
